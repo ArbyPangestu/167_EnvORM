@@ -9,5 +9,13 @@ const development = {
   dialect: "mysql",
 };
 
-
+const production = {
+  user_env_variable: "POSTGRES_URL",
+  dialect: "postgres",
+  dialectOptions: {
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  },
+}
 
