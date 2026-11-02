@@ -55,7 +55,7 @@ app.put('/komik/:id', async (req, res) => {
 app.delete('/komik/:id', async (req, res) => {
     const id = req.params.id;
     try{
-        const komik = await db.komik.findByPk(id);
+        const komik = await db.Komik.findByPk(id);
         if(!komik){
             return res.status(404).send({message: "Komik tidak ditemukan"});
         }
